@@ -45,7 +45,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :default do
-  gem "redis-objects"
   gem "slim"
   gem "slim-rails"
 end
