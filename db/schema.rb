@@ -13,12 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20140119073757) do
 
-  create_table "articles", id: false, force: true do |t|
-    t.string "file_name", null: false
-    t.string "title"
-    t.string "body"
+  create_table "articles", force: true do |t|
+    t.string  "title"
+    t.string  "body"
+    t.integer "published_year"
+    t.integer "published_month"
   end
 
-  add_index "articles", ["file_name"], name: "index_articles_on_file_name", unique: true
+  add_index "articles", ["published_year", "published_month", "title"], name: "index_articles_on_published_year_and_published_month_and_title", unique: true
 
 end
