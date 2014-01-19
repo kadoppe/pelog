@@ -116,6 +116,9 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    redis (3.0.6)
+    redis-objects (0.8.0)
+      redis (>= 3.0.2)
     request_profiler (0.0.3)
       ruby-prof
     rest-client (1.6.7)
@@ -203,6 +206,7 @@ DEPENDENCIES
   pry-coolline
   pry-rails
   rails (= 4.0.2)
+  redis-objects
   request_profiler
   rspec-rails
   sass-rails (~> 4.0.0)
