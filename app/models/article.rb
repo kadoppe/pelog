@@ -1,6 +1,7 @@
 class Article < ActiveRecord::Base
   FILE_PATH_PATTERN = "#{Rails.root}/app/articles/*.md"
 
+  # Sync database record with markdown files
   def self.sync
     before_ids = Article.all.pluck(:id)
     after_ids = []
@@ -19,6 +20,7 @@ class Article < ActiveRecord::Base
     Article.where(id: will_delete_ids).destroy_all
   end
 
+  # Get all markdown file paths
   def self.file_paths
     Dir.glob(FILE_PATH_PATTERN).sort
   end
