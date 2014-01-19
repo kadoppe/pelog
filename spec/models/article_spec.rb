@@ -5,10 +5,17 @@ describe Article do
   let (:file_path) { "#{Rails.root}/spec/articles/2014-01-19-slug.md" }
 
   describe '.sync' do
-    before { Article.sync }
+    before do
+      @article = FactoryGirl.create :article
+      Article.sync
+    end
 
-    it 'sync articles table with markdown files' do
-      Article.all.should_not be_empty
+    it 'syncs articles table with markdown files' do
+      expect(Article.all).not_to be_empty
+    end
+
+    it 'deletes article which not has markdown file' do
+      expect { Article.find(@article.id) }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
 

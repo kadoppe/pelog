@@ -2,13 +2,21 @@ class Article < ActiveRecord::Base
   FILE_PATH_PATTERN = "#{Rails.root}/app/articles/*.md"
 
   def self.sync
+    before_ids = Article.all.pluck(:id)
+    after_ids = []
+
     file_paths.each do |file_path|
       article_data = extract_meta_data(file_path)
       article = Article.where(article_data).first_or_create
 
       article.body = extract_body(file_path)
       article.save!
+
+      after_ids << article.id
     end
+
+    will_delete_ids = before_ids - after_ids
+    Article.where(id: will_delete_ids).destroy_all
   end
 
   def self.file_paths
