@@ -37,7 +37,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
@@ -45,6 +44,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :default do
+  gem "kramdown"
   gem "slim"
   gem "slim-rails"
 end
@@ -65,6 +65,7 @@ end
 group :development, :test do
   gem 'coveralls', require: false
   gem "factory_girl_rails"
+  gem 'rake_shared_context'
   gem "rspec-rails"
   gem "spring"
 end
