@@ -37,7 +37,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
@@ -55,6 +54,10 @@ group :development do
   gem "binding_of_caller"
   gem "hirb"
   gem "hirb-unicode"
+  gem "pry"
+  gem "pry-byebug"
+  gem "pry-coolline"
+  gem "pry-rails"
   gem "request_profiler"
   gem "simplecov"
 end
@@ -62,10 +65,6 @@ end
 group :development, :test do
   gem 'coveralls', require: false
   gem "factory_girl_rails"
-  gem "pry"
-  gem "pry-byebug"
-  gem "pry-coolline"
-  gem "pry-rails"
   gem 'rake_shared_context'
   gem "rspec-rails"
   gem "spring"
