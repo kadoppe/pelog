@@ -45,6 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :default do
+  gem "kramdown"
   gem "slim"
   gem "slim-rails"
 end
