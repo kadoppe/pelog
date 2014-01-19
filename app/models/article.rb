@@ -47,4 +47,16 @@ class Article < ActiveRecord::Base
     text = File.open(file_path).read
     Kramdown::Document.new(text, auto_ids: false).to_html
   end
+
+  # Extract front matter of article
+  #
+  # @param file_path [String] markdown file path
+  # @return [Hash] yaml tree of front matter
+  def self.extract_front_matter(file_path)
+    text = File.open(file_path).read
+    m = /---\n(.*)---\n/m.match(text)
+    if m.present?
+      return YAML::parse(m[1]).transform.symbolize_keys
+    end
+  end
 end
