@@ -11,6 +11,12 @@ class Article < ActiveRecord::Base
       article = Article.where(article_data).first_or_create
 
       article.body = extract_body(file_path)
+
+      front_matter = extract_front_matter(file_path)
+      if front_matter.present?
+        article.title = front_matter[:title]
+      end
+
       article.save!
 
       after_ids << article.id
@@ -45,6 +51,7 @@ class Article < ActiveRecord::Base
   # @return [String] html body of article
   def self.extract_body(file_path)
     text = File.open(file_path).read
+    text.gsub!(/---\n(.*)---\n/m, '')
     Kramdown::Document.new(text, auto_ids: false).to_html
   end
 
