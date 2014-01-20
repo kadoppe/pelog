@@ -38,9 +38,7 @@ class Article < ActiveRecord::Base
   def self.extract_meta_data(file_path)
     m = /(\d{4})-(\d{2})-(\d{2})-(.+)\.md/.match(file_path)
     {
-      published_year: m[1].to_i,
-      published_month: m[2].to_i,
-      published_date: m[3].to_i,
+      published_at: Date.new(m[1].to_i, m[2].to_i, m[3].to_i),
       slug: m[4]
     }
   end

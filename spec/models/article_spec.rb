@@ -28,9 +28,7 @@ describe Article do
 
   describe '.extract_meta_data' do
     subject { Article.extract_meta_data(file_path) }
-    its([:published_year]) { should eq(2014) }
-    its([:published_month]) { should eq(1) }
-    its([:published_date]) { should eq(19) }
+    its([:published_at]) { should eq(Date::new(2014, 1, 19)) }
     its([:slug]) { should eq('slug') }
   end
 
