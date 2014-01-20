@@ -6,6 +6,15 @@ describe Article do
     "#{Rails.root}/spec/articles/2014-01-19-slug.md"
   end
 
+  describe 'default scope' do
+    let(:article_one) { FactoryGirl.create(:article, published_at: Date::new(2011, 1, 1)) }
+    let(:article_two) { FactoryGirl.create(:article, published_at: Date::new(2013, 1, 1)) }
+
+    it 'orders by descending published_at' do
+      expect(Article.all).to eq([article_two, article_one])
+    end
+  end
+
   describe '.sync' do
     before do
       @article = FactoryGirl.create :article
@@ -28,9 +37,7 @@ describe Article do
 
   describe '.extract_meta_data' do
     subject { Article.extract_meta_data(file_path) }
-    its([:published_year]) { should eq(2014) }
-    its([:published_month]) { should eq(1) }
-    its([:published_date]) { should eq(19) }
+    its([:published_at]) { should eq(Date::new(2014, 1, 19)) }
     its([:slug]) { should eq('slug') }
   end
 
