@@ -1,6 +1,8 @@
 class Article < ActiveRecord::Base
   FILE_PATH_PATTERN = "#{Rails.root}/app/articles/*.md"
 
+  default_scope order('published_at DESC')
+
   # Sync database record with markdown files
   def self.sync
     before_ids = Article.all.pluck(:id)
