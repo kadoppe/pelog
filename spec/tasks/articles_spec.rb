@@ -6,7 +6,7 @@ describe 'articles:sync' do
   its(:prerequisites) { should include('environment') }
 
   it 'sync the report' do
-    Article.should_receive(:sync)
+    ArticleParser.should_receive(:sync)
     subject.invoke
   end
 end
