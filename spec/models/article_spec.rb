@@ -11,4 +11,9 @@ describe Article do
       expect(Article.all).to eq([article_two, article_one])
     end
   end
+
+  describe '#github_url' do
+    subject { article.github_url }
+    it { should eq 'https://github.com/kadoppe/pelog/tree/master/app/articles/2014-01-01-test.html' }
+  end
 end

@@ -11,6 +11,7 @@ class ArticleParser
       article = Article.where(article_data).first_or_create
 
       article.body = extract_body(file_path)
+      article.file_name = File.basename(file_path)
 
       front_matter = extract_front_matter(file_path)
       if front_matter.present?
