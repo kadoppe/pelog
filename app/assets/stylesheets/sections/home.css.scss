@@ -1,0 +1,37 @@
+.container {
+  background-color: white;
+}
+
+.surface {
+  @include box-sizing(border-box);
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.screen-content {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+.eyecatch-image-wrapper {
+  height: 450px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.eyecatch-image {
+  background-image: image-url('eyecatch-home.jpg');
+  background-position: center center;
+  background-size: cover;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
