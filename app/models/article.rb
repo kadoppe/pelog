@@ -63,7 +63,13 @@ class Article < ActiveRecord::Base
     text = File.open(file_path).read
     m = /---\n(.*)---\n/m.match(text)
     if m.present?
-      return YAML::parse(m[1]).transform.symbolize_keys
+      front_matter = YAML::parse(m[1]).transform.symbolize_keys
+
+      if front_matter[:permalink].present?
+        front_matter[:permalink].gsub!(/^\//, '')
+      end
+
+      return front_matter
     end
   end
 end
