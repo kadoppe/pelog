@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120155414) do
+ActiveRecord::Schema.define(version: 20140121041645) do
 
   create_table "articles", force: true do |t|
     t.string "slug"
     t.string "body"
     t.string "title"
     t.date   "published_at"
+    t.string "permalink"
   end
 
+  add_index "articles", ["permalink"], name: "index_articles_on_permalink", unique: true
   add_index "articles", ["published_at"], name: "index_articles_on_published_at"
   add_index "articles", ["slug"], name: "index_articles_on_published_year_and_published_month_and_slug", unique: true
 
