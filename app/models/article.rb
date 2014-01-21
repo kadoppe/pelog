@@ -17,6 +17,7 @@ class Article < ActiveRecord::Base
       front_matter = extract_front_matter(file_path)
       if front_matter.present?
         article.title = front_matter[:title]
+        article.permalink = front_matter[:permalink]
       end
 
       article.save!
