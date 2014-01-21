@@ -5,8 +5,7 @@ describe 'routing to articles' do
     expect(get: '/articles/2014/01/slug.html').to route_to(
       controller: 'articles',
       action: 'show',
-      permalink: '2014/01/slug',
-      format: 'html'
+      permalink: '2014/01/slug.html',
     )
   end
 end

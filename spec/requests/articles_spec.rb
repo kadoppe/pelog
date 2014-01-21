@@ -8,7 +8,7 @@ describe 'Articles' do
 
   describe 'GET /articles/YYYY/mm/slug.html' do
     let (:article) { FactoryGirl.create :article }
-    subject { get article_path(permalink: article.permalink) }
+    subject { get "/articles/#{article.permalink}" }
     specify { subject and expect(response.status).to eq(200) }
   end
 end
