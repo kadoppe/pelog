@@ -1,3 +1,5 @@
 - @articles.each do |article|
   ul
-    li #{article.published_at} | #{article.title}
+    li
+      a href="#{article_path(permalink: article.permalink)}"
+        | #{article.published_at} | #{article.title}
