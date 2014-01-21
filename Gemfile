@@ -44,7 +44,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :default do
+  gem "bourbon"
   gem "kramdown"
+  gem "neat"
   gem "slim"
   gem "slim-rails"
 end
