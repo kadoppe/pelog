@@ -63,6 +63,10 @@ group :development do
   gem "pry-rails"
   gem "request_profiler"
   gem "simplecov"
+  gem 'guard', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
 end
 
 group :development, :test do
