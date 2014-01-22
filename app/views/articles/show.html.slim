@@ -1,4 +1,24 @@
-h1= @article.title
-== @article.body
+article.post-article.scrolling-region
+  .post-field.image-picker-wrap.background-size-full.picker-layout-fill
+    .story-cover
+      .story-cover-image
+        .story-cover-content
+          .post-content.layout-single-column
+            header.post-header
+              h1.post-title= @article.title
+              ul.post-item-meta
+                li.post-item-meta-item
+                  | Published #{@article.published_at}
 
-= link_to 'on GitHub', @article.github_url
+          span.story-cover-arrow
+
+  section.post-page-wrapper
+    .post-page-wrapper-inner
+      .post-content
+        .post-content-inner
+          .notes-source
+            .post-field.body
+              .layout-single-column
+                == @article.body
+
+                = link_to 'on GitHub', @article.github_url

@@ -1,27 +1,24 @@
-.container
-  .surface
-    .screen-content
-      .eyecatch-image-wrapper
-        .eyecatch-image
+.eyecatch-image-wrapper
+  .eyecatch-image
 
-      .layout-foreground.scrolling-region
-        header.hero.hero-home.layout-single-column
-          .align-middle.layout-single-column.layout-foreground.layout-fill-height
-            .align-block
-              h1.hero-title pelog
-              p.hero-description A blog written by kadoppe.
+.layout-foreground.scrolling-region
+  header.hero.hero-home.layout-single-column
+    .align-middle.layout-single-column.layout-foreground.layout-fill-height
+      .align-block
+        h1.hero-title pelog
+        p.hero-description A blog written by kadoppe.
 
-        .background-white
-          .bucket.layout-single-column
-            ul.bucket-posts
-              - @articles.each do |article|
-                  li.bucket-item
-                    .post-item
-                      h3.post-item-title
-                        a href="#{article_path(permalink: article.permalink)}"
-                          = article.title
-                      a.post-item-snippet href="#{article_path(permalink: article.permalink)}"
-                        p= article.snippet
-                      ul.post-item-meta
-                        li.post-item-meta-item
-                          | Published #{article.published_at}
+  .background-white
+    .bucket.layout-single-column
+      ul.bucket-posts
+        - @articles.each do |article|
+            li.bucket-item
+              .post-item
+                h3.post-item-title
+                  a href="#{article_path(permalink: article.permalink)}"
+                    = article.title
+                a.post-item-snippet href="#{article_path(permalink: article.permalink)}"
+                  p= article.snippet
+                ul.post-item-meta
+                  li.post-item-meta-item
+                    | Published #{article.published_at}
