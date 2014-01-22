@@ -39,15 +39,19 @@
   }
 
   @include respond-to(small-screens) {
-    font-size: $articleTitleFontSize * $smallScreensFontRatio;
+    font-size: $articleTitleFontSize * 0.8;
   }
 }
 
 .article-snippet {
   display: block;
-  font-size: 18px;
+  font-size: $articleTextFontSize;
   font-style: italic;
   margin-top: 8px;
+
+  @include respond-to(small-screens) {
+    font-size: $articleTextFontSize * 0.9;
+  }
 }
 
 .article-line {
@@ -62,7 +66,7 @@
   @include respond-to(small-screens) {
     margin-top: 80px * 0.7;
     padding-bottom: 60px * 0.7;
-    font-size: $articleTextFontSize * $smallScreensFontRatio;
+    font-size: $articleTextFontSize * 0.9
   }
 
   & a {
@@ -76,11 +80,11 @@
   h3 {
     font-size: $articleH3FontSize;
     margin-top: 60px;
-    line-height: 1;
+    line-height: 1.4;
 
     @include respond-to(small-screens) {
       margin-top: 60px * 0.7;
-      font-size: $articleH3FontSize * $smallScreensFontRatio;
+      font-size: $articleH3FontSize * 0.9;
     }
   }
 
