@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140121073310) do
+ActiveRecord::Schema.define(version: 20140122052025) do
 
   create_table "articles", force: true do |t|
     t.string "slug"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140121073310) do
     t.date   "published_at"
     t.string "permalink"
     t.string "file_name"
+    t.string "snippet"
   end
 
   add_index "articles", ["permalink"], name: "index_articles_on_permalink", unique: true

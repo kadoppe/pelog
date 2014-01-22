@@ -21,8 +21,7 @@
                         a href="#{article_path(permalink: article.permalink)}"
                           = article.title
                       a.post-item-snippet href="#{article_path(permalink: article.permalink)}"
-                        p
-                          | At age 90, Dr. Quentin Young remembers one patient he had in 1965 particularly well.
+                        p= article.snippet
                       ul.post-item-meta
                         li.post-item-meta-item
                           | Published #{article.published_at}
