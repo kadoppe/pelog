@@ -47,6 +47,7 @@ group :default do
   gem "bourbon"
   gem "kramdown"
   gem "neat"
+  gem "normalize-rails"
   gem "slim"
   gem "slim-rails"
 end
