@@ -1,3 +1,6 @@
+@import 'fonts/jaf_bernino_sans';
+@import 'fonts/freight_text_pro';
+
 .container {
   background-color: white;
 }
@@ -10,10 +13,18 @@
   width: 100%;
 }
 
-.screen-content {
+.screen-content, .scrolling-region {
   height: 100%;
+}
+
+.screen-content {
   overflow: auto;
   position: relative;
+}
+
+.scrolling-region {
+  position: relative;
+  overflow: auto;
 }
 
 .eyecatch-image-wrapper {
@@ -34,4 +45,68 @@
   right: 0px;
   top: 0px;
 }
+
+.hero {
+  text-align: center;
+  height: 500px;
+
+  &.hero-home {
+    height: 380px;
+
+    .hero-description {
+      outline: 0px none;
+      font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+      letter-spacing: 0.01rem;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 22px;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+
+    .hero-title {
+      font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+      font-weight: 700px;
+      font-style: normal;
+      font-size: 50px;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      outline: 0 none;
+    }
+
+    .hero-title, .hero-description {
+      margin-bottom: 0px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.align-middle:before {
+  content: "";
+  height: 100%;
+  margin-right: -0.25em;
+}
+
+.align-middle {
+  &:before, .align-block {
+    display: inline-block;
+    vertical-align: middle
+  }
+}
+
+
+.layout-fill-height {
+  height: 100%;
+}
+
+.layout-foreground {
+  position: relative;
+  z-index: 100;
+}
+
+.layout-single-column {
+  width: 640px;
+  margin: 0px auto;
+}
+
 
