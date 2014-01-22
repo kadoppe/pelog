@@ -2,13 +2,17 @@
 
 .article {
   margin-top: 80px;
+
+  @include respond-to(small-screens) {
+    margin-top: 80px * 0.7;
+  }
 }
 
 .article-list {
   list-style-type: none;
   margin-top: 40px;
-  padding-left: 0;
   padding-bottom: 30px;
+  padding-left: 0;
 }
 
 .article-item {
@@ -22,7 +26,7 @@
 }
 
 .article-title {
-  font-size: 36px;
+  font-size: $articleTitleFontSize;
   line-height: 1.4;
   margin-top: 5px;
 
@@ -32,6 +36,10 @@
     &:hover {
       color: $moreHighlightedColor;
     }
+  }
+
+  @include respond-to(small-screens) {
+    font-size: $articleTitleFontSize * $smallScreensFontRatio;
   }
 }
 
@@ -47,9 +55,15 @@
 }
 
 .article-body {
-  font-size: 18px;
+  font-size: $articleTextFontSize;
   margin-top: 80px;
   padding-bottom: 60px;
+
+  @include respond-to(small-screens) {
+    margin-top: 80px * 0.7;
+    padding-bottom: 60px * 0.7;
+    font-size: $articleTextFontSize * $smallScreensFontRatio;
+  }
 
   & a {
     color: $highlightedColor;
@@ -60,13 +74,22 @@
   }
 
   h3 {
-    font-size: 28px;
+    font-size: $articleH3FontSize;
     margin-top: 60px;
     line-height: 1;
+
+    @include respond-to(small-screens) {
+      margin-top: 60px * 0.7;
+      font-size: $articleH3FontSize * $smallScreensFontRatio;
+    }
   }
 
   p {
     margin-top: 35px;
-    line-height: 2;
+    line-height: 1.9;
+
+    @include respond-to(small-screens) {
+      margin-top: 35px * 0.7;
+    }
   }
 }
