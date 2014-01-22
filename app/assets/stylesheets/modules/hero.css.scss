@@ -1,0 +1,43 @@
+@import 'globals/all';
+
+.hero {
+  background-color: $headerBackgroundColor;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.hero-logo {
+  margin-top: 60px;
+  border-radius: 48px;
+  height: 96px;
+  width: 96px;
+}
+
+.hero-title {
+  font-size: 60px;
+  margin-top: 5px;
+  line-height: 1;
+}
+
+.hero-description {
+  color: $highlightedColor;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.hero-social-icons {
+  margin-top: 40px;
+}
+
+.hero-social-icon {
+  display: inline-block;
+  margin-left: 20px;
+
+  &:hover {
+    color: $moreHighlightedColor;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
