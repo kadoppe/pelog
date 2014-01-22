@@ -1,6 +1,44 @@
+//=require normalize-rails
 @import "bourbon";
 @import "sections/home";
 
+html, body, .container {
+  height: 100%;
+}
+
 body {
-  margin: 0px;
+  overflow: hidden;
+}
+
+h3 {
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+ul {
+  padding: 0;
+  list-style: none outside none;
+}
+
+ul {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
