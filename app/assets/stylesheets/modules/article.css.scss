@@ -1,10 +1,18 @@
 @import 'globals/all';
 
+.article {
+  margin-top: 80px;
+
+  @include respond-to(small-screens) {
+    margin-top: 80px * 0.7;
+  }
+}
+
 .article-list {
   list-style-type: none;
   margin-top: 40px;
-  padding-left: 0;
   padding-bottom: 30px;
+  padding-left: 0;
 }
 
 .article-item {
@@ -17,22 +25,75 @@
   padding-left: 0;
 }
 
-.article-item-title {
-  font-size: 30px;
-  line-height: 1.2;
+.article-title {
+  font-size: $articleTitleFontSize;
+  line-height: 1.4;
   margin-top: 5px;
 
-  & > a {
+  & a {
     color: $highlightedColor;
 
     &:hover {
       color: $moreHighlightedColor;
     }
   }
+
+  @include respond-to(small-screens) {
+    font-size: $articleTitleFontSize * 0.8;
+  }
 }
 
-.article-item-snippet {
+.article-snippet {
   display: block;
-  font-size: 18px;
-  margin-top: 5px;
+  font-size: $articleTextFontSize;
+  font-style: italic;
+  margin-top: 8px;
+
+  @include respond-to(small-screens) {
+    font-size: $articleTextFontSize * 0.9;
+  }
+}
+
+.article-line {
+  margin-top: 30px;
+}
+
+.article-body {
+  font-size: $articleTextFontSize;
+  margin-top: 80px;
+  padding-bottom: 60px;
+
+  @include respond-to(small-screens) {
+    margin-top: 80px * 0.7;
+    padding-bottom: 60px * 0.7;
+    font-size: $articleTextFontSize * 0.9
+  }
+
+  & a {
+    color: $highlightedColor;
+
+    &:hover {
+      color: $moreHighlightedColor;
+    }
+  }
+
+  h3 {
+    font-size: $articleH3FontSize;
+    margin-top: 60px;
+    line-height: 1.4;
+
+    @include respond-to(small-screens) {
+      margin-top: 60px * 0.7;
+      font-size: $articleH3FontSize * 0.9;
+    }
+  }
+
+  p {
+    margin-top: 35px;
+    line-height: 1.9;
+
+    @include respond-to(small-screens) {
+      margin-top: 35px * 0.7;
+    }
+  }
 }

@@ -11,33 +11,42 @@
   border-radius: 48px;
   height: 96px;
   width: 96px;
+
+  @include respond-to(small-screens) {
+    margin-top: 60px * 0.7;
+    height: 96px * 0.8;
+    width: 96px * 0.8;
+    border-radius: 48px * 0.8;
+  }
 }
 
 .hero-title {
   font-size: 60px;
   margin-top: 5px;
   line-height: 1;
+
+  @include respond-to(small-screens) {
+    font-size: 60px * 0.8;
+  }
 }
 
 .hero-description {
   color: $highlightedColor;
   font-size: 22px;
   margin-top: 10px;
+
+  @include respond-to(small-screens) {
+    font-size: 22px * 0.9;
+  }
 }
 
-.hero-social-icons {
+.hero-icons {
   margin-top: 40px;
-}
 
-.hero-social-icon {
-  display: inline-block;
-  margin-left: 20px;
-
-  &:hover {
-    color: $moreHighlightedColor;
-  }
-
-  &:first-child {
-    margin-left: 0;
+  @include respond-to(small-screens) {
+    margin-top: 40px * 0.7;
+    font-size: 0.7em;
   }
 }
+
+
