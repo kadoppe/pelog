@@ -1,6 +1,14 @@
 @import "bourbon";
+@import "neat";
 @import "sections/home";
+
+$max-width: em(640);
+
+html, body, .container {
+  height: 100%;
+}
 
 body {
   margin: 0px;
+  overflow: hidden;
 }
