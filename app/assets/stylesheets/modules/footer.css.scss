@@ -1,0 +1,19 @@
+@import 'globals/all';
+
+.footer {
+  background-color: $footerBackgroundColor;
+  padding-bottom: 12px;
+}
+
+.footer-badges {
+  margin-top: 15px;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 3px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

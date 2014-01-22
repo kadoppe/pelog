@@ -1,9 +1,9 @@
 @import 'globals/all';
 
 .hero {
-  background-color: #FAFAFA;
+  background-color: $headerBackgroundColor;
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .hero-logo {
@@ -23,4 +23,21 @@
   color: $highlightedColor;
   font-size: 22px;
   margin-top: 10px;
+}
+
+.hero-social-icons {
+  margin-top: 40px;
+}
+
+.hero-social-icon {
+  display: inline-block;
+  margin-left: 10px;
+
+  &:hover {
+    color: $moreHighlightedColor;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
