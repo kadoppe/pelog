@@ -5,17 +5,18 @@ header.hero
     p.hero-description A blog written by kadoppe.
 
 .l-container
-  ul.articles
+  ul.article-list
     - @articles.each do |article|
-        li.post-item
-          h3.post-item-title
+        li.article-item
+          ul.article-item-meta
+            li.article-item-meta-item= article.published_at.strftime('%Y/%m/%d')
+
+          h3.article-item-title
             a href="#{article_path(permalink: article.permalink)}"
               = article.title
-          a.post-item-snippet href="#{article_path(permalink: article.permalink)}"
+
+          a.article-item-snippet href="#{article_path(permalink: article.permalink)}"
             p= article.snippet
-          ul.post-item-meta
-            li.post-item-meta-item
-              | Published #{article.published_at}
 
 footer
   .l-container
