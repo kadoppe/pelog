@@ -4,9 +4,25 @@
       .eyecatch-image-wrapper
         .eyecatch-image
 
+      .layout-foreground.scrolling-region
+        header.hero.hero-home.layout-single-column
+          .align-middle.layout-single-column.layout-foreground.layout-fill-height
+            .align-block
+              h1.hero-title pelog
+              p.hero-description A blog written by kadoppe.
 
-- @articles.each do |article|
-  ul
-    li
-      a href="#{article_path(permalink: article.permalink)}"
-        | #{article.published_at} | #{article.title}
+        .background-white
+          .bucket.layout-single-column
+            ul.bucket-posts
+              - @articles.each do |article|
+                  li.bucket-item
+                    .post-item
+                      h3.post-item-title
+                        a href="#{article_path(permalink: article.permalink)}"
+                          = article.title
+                      a.post-item-snippet href="#{article_path(permalink: article.permalink)}"
+                        p
+                          | At age 90, Dr. Quentin Young remembers one patient he had in 1965 particularly well.
+                      ul.post-item-meta
+                        li.post-item-meta-item
+                          | Published #{article.published_at}
