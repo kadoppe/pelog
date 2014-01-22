@@ -1,0 +1,17 @@
+@import 'globals/all';
+
+.social-icons {
+}
+
+.social-icon {
+  display: inline-block;
+  margin-left: 20px;
+
+  &:hover {
+    color: $moreHighlightedColor;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
