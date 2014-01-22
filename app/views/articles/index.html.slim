@@ -5,12 +5,12 @@ header
       h1.hero-title pelog
       p.hero-description A blog written by kadoppe.
 
-      .hero-social-icons
-        a.hero-social-icon href="https://twitter.com/kadoppe"
+      .l-hero-social-icons.social-icons
+        a.social-icon href="https://twitter.com/kadoppe"
           i.fa.fa-3x.fa-twitter
-        a.hero-social-icon href="https://github.com/kadoppe"
+        a.social-icon href="https://github.com/kadoppe"
           i.fa.fa-3x.fa-github
-        a.hero-social-icon href="http://feeds.feedburner.com/creativestylerss"
+        a.social-icon href="http://feeds.feedburner.com/creativestylerss"
           i.fa.fa-3x.fa-rss
 
 .l-container
@@ -20,21 +20,10 @@ header
           ul.article-item-meta
             li.article-item-meta-item= article.published_at.strftime('%Y/%m/%d')
 
-          h3.article-item-title
+          h3.article-title
             a href="#{article_path(permalink: article.permalink)}"
               = article.title
 
-          a.article-item-snippet href="#{article_path(permalink: article.permalink)}"
+          a.article-snippet href="#{article_path(permalink: article.permalink)}"
             p= article.snippet
 
-footer.footer
-  .l-container
-    .footer-badges
-      a.badge href="https://travis-ci.org/kadoppe/pelog"
-        img src="https://travis-ci.org/kadoppe/pelog.png?branch=master"
-
-      a.badge href="https://coveralls.io/r/kadoppe/pelog?branch=master"
-        img src="https://coveralls.io/repos/kadoppe/pelog/badge.png?branch=master"
-
-      a.badge href="https://codeclimate.com/github/kadoppe/pelog"
-        img src="https://codeclimate.com/github/kadoppe/pelog.png"

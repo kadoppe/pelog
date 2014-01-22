@@ -1,5 +1,9 @@
 @import 'globals/all';
 
+.article {
+  margin-top: 30px;
+}
+
 .article-list {
   list-style-type: none;
   margin-top: 40px;
@@ -17,12 +21,12 @@
   padding-left: 0;
 }
 
-.article-item-title {
-  font-size: 30px;
-  line-height: 1.2;
+.article-title {
+  font-size: 36px;
+  line-height: 1.4;
   margin-top: 5px;
 
-  & > a {
+  & a {
     color: $highlightedColor;
 
     &:hover {
@@ -31,8 +35,38 @@
   }
 }
 
-.article-item-snippet {
+.article-snippet {
   display: block;
   font-size: 18px;
-  margin-top: 5px;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.article-line {
+  margin-top: 30px;
+}
+
+.article-body {
+  font-size: 18px;
+  margin-top: 40px;
+  padding-bottom: 60px;
+
+  & a {
+    color: $highlightedColor;
+
+    &:hover {
+      color: $moreHighlightedColor;
+    }
+  }
+
+  h3 {
+    font-size: 28px;
+    margin-top: 60px;
+    line-height: 1;
+  }
+
+  p {
+    margin-top: 35px;
+    line-height: 2;
+  }
 }

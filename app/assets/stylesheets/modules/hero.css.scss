@@ -25,19 +25,3 @@
   margin-top: 10px;
 }
 
-.hero-social-icons {
-  margin-top: 40px;
-}
-
-.hero-social-icon {
-  display: inline-block;
-  margin-left: 20px;
-
-  &:hover {
-    color: $moreHighlightedColor;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-}

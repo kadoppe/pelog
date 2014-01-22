@@ -1,24 +1,27 @@
-article.post-article.scrolling-region
-  .post-field.image-picker-wrap.background-size-full.picker-layout-fill
-    .story-cover
-      .story-cover-image
-        .story-cover-content
-          .post-content.layout-single-column
-            header.post-header
-              h1.post-title= @article.title
-              ul.post-item-meta
-                li.post-item-meta-item
-                  | Published #{@article.published_at}
+nav.nav
+  .l-container
+    .l-nav-left
+      h1.nav-title
+        a href="/" pelog
 
-          span.story-cover-arrow
+    .l-nav-right
+      .nav-icons.social-icons
+        a.social-icon href="https://twitter.com/kadoppe"
+          i.fa.fa-2x.fa-twitter
+        a.social-icon href="https://github.com/kadoppe"
+          i.fa.fa-2x.fa-github
+        a.social-icon href="http://feeds.feedburner.com/creativestylerss"
+          i.fa.fa-2x.fa-rss
 
-  section.post-page-wrapper
-    .post-page-wrapper-inner
-      .post-content
-        .post-content-inner
-          .notes-source
-            .post-field.body
-              .layout-single-column
-                == @article.body
+.l-container
+  article.article
+    ul.article-item-meta
+      li.article-item-meta-item= @article.published_at.strftime('%Y/%m/%d')
 
-                = link_to 'on GitHub', @article.github_url
+    h1.article-title
+      a href="#{article_path(permalink: @article.permalink)}"
+        = @article.title
+
+    p.article-snippet= @article.snippet
+
+    .article-body== @article.body
