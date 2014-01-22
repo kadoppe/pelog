@@ -1,9 +1,18 @@
 @import 'bourbon';
 @import 'neat';
 
-$max-width: em(700);
+$max-width: em(730);
 
 .l-container {
   @include outer-container;
-  padding: 0 20px;
+  padding: 0 15px;
+}
+
+.l-nav-left {
+  @include span-columns(6);
+}
+
+.l-nav-right {
+  @include span-columns(6);
+  text-align: right;
 }
