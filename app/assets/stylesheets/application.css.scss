@@ -1,45 +1,5 @@
-//=require normalize-rails
-@import "bourbon";
-@import "sections/home";
-
-html, body, .container {
-  height: 100%;
-}
-
-body {
-  overflow: hidden;
-}
-
-h3 {
-  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  font-style: normal;
-}
-
-h3 {
-  margin: 0;
-}
-
-article, header, section {
-  display: block;
-}
-
-ul {
-  padding: 0;
-  list-style: none outside none;
-}
-
-ul {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+//= require normalize-rails
+//= require font-awesome
+//= require ./base
+//= require ./layout
+//= require_tree ./modules

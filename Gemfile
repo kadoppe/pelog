@@ -45,6 +45,7 @@ end
 
 group :default do
   gem "bourbon"
+  gem "font-awesome-rails"
   gem "kramdown"
   gem "neat"
   gem "normalize-rails"

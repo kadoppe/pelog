@@ -1,0 +1,38 @@
+@import 'globals/all';
+
+.article-list {
+  list-style-type: none;
+  margin-top: 40px;
+  padding-left: 0;
+  padding-bottom: 30px;
+}
+
+.article-item {
+  margin-top: 40px;
+}
+
+.article-item-meta {
+  color: #CDCDD1;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.article-item-title {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-top: 5px;
+
+  & > a {
+    color: $highlightedColor;
+
+    &:hover {
+      color: $moreHighlightedColor;
+    }
+  }
+}
+
+.article-item-snippet {
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+}
