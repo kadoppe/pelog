@@ -70,8 +70,6 @@
     margin: 80px 0 30px;
     color: $highlightedColor;
 
-    // text-align: center;
-
     @include respond-to(small-screens) {
       margin: (100px * 0.7) 0 (30px * 0.7);
       font-size: $articleH3FontSize * 0.9;
