@@ -7,8 +7,8 @@
           li.article-item.l-article-row
             ul.article-item-meta
               li.article-item-meta-item
-                time datetime=@article.published_at.to_datetime
-                  = @article.published_at.strftime('%Y/%m/%d')
+                time datetime=article.published_at.to_datetime
+                  = article.published_at.strftime('%Y/%m/%d')
 
             h3.article-title
               a href="#{article_permalink(article)}"
