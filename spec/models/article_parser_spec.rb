@@ -4,26 +4,6 @@ describe ArticleParser do
     "#{Rails.root}/spec/articles/2014-01-19-slug.md"
   end
 
-  describe '.sync' do
-    before do
-      @article = FactoryGirl.create :article
-      ArticleParser.sync
-    end
-
-    it 'syncs articles table with markdown files' do
-      expect(Article.all).not_to be_empty
-    end
-
-    it 'deletes article which not has markdown file' do
-      expect { Article.find(@article.id) }.to raise_error(ActiveRecord::RecordNotFound)
-    end
-  end
-
-  describe '.file_paths' do
-    subject { ArticleParser.file_paths }
-    it { should_not be_empty }
-  end
-
   describe '.extract_meta_data' do
     subject { ArticleParser.extract_meta_data(file_path) }
     its([:published_at]) { should eq(Date::new(2014, 1, 19)) }
