@@ -19,4 +19,12 @@ module ApplicationHelper
   def blog_author
     'kadoppe'
   end
+
+  def canonical_url(article=nil)
+    if article.present?
+      article_permalink(article, true)
+    else
+      root_url
+    end
+  end
 end
