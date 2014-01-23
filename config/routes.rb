@@ -1,4 +1,4 @@
 Pelog::Application.routes.draw do
   root to: 'articles#index'
-  get 'articles/*permalink', to: 'articles#show', as: 'article', permalink: /.*/
+  get '/:year/:month/:day/:slug', to: 'articles#show', as: 'article'
 end
