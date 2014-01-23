@@ -15,6 +15,7 @@ end
 
 group :default do
   gem "bourbon"
+  gem "figaro"
   gem "font-awesome-rails"
   gem "kramdown"
   gem "neat"
