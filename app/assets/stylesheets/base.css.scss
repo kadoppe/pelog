@@ -14,8 +14,12 @@ p, ul {
 }
 
 a {
-  color: $textColor;
   text-decoration: none;
+  color: $highlightedColor;
+
+  &:hover {
+    color: $moreHighlightedColor;
+  }
 }
 
 hr {
