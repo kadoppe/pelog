@@ -52,7 +52,12 @@ class ArticleParser
   def self.extract_body(file_path)
     text = File.open(file_path).read
     text.gsub!(/---\n(.*)---\n/m, '')
-    Kramdown::Document.new(text, auto_ids: false).to_html
+    Kramdown::Document.new(
+      text,
+      auto_ids: false,
+      enable_coderay: true,
+      coderay_line_numbers: nil
+    ).to_html
   end
 
   # Extract front matter of article

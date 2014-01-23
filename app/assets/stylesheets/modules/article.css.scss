@@ -129,14 +129,22 @@
   }
 
   pre {
-    line-height: 1.4;
+    font-size: 15px;
     background-color: $headerBackgroundColor;
-    border: 1px solid #BBBBBB;
     border-radius: 2px;
+    border: 1px solid #BBBBBB;
+    line-height: 1.5;
+    overflow: auto;
     padding: 12px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    overflow: auto;}
+
+    @include respond-to(small-screens) {
+      padding: 12px * 0.7;
+      font-size: 15px * 0.9;
+    }
+
+  }
 }
 
 .article-icons {

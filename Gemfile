@@ -16,6 +16,7 @@ end
 
 group :default do
   gem "bourbon"
+  gem "coderay"
   gem "figaro"
   gem "font-awesome-rails"
   gem "foreman"
@@ -24,6 +25,7 @@ group :default do
   gem "newrelic_rpm"
   gem "normalize-rails"
   gem "puma"
+  gem "rouge"
   gem "slim"
   gem "slim-rails"
 end
