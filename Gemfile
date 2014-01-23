@@ -17,9 +17,11 @@ group :default do
   gem "bourbon"
   gem "figaro"
   gem "font-awesome-rails"
+  gem "foreman"
   gem "kramdown"
   gem "neat"
   gem "normalize-rails"
+  gem "puma"
   gem "slim"
   gem "slim-rails"
 end
