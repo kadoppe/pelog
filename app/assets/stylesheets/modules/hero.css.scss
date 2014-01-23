@@ -28,7 +28,7 @@
 .hero-title {
   font-family: $helvetica;
   font-size: 60px;
-  margin-top: 5px;
+  margin-top: 3px;
   line-height: 1;
 
   @include respond-to(small-screens) {
@@ -39,7 +39,7 @@
 .hero-description {
   color: $highlightedColor;
   font-size: 22px;
-  margin-top: 10px;
+  margin-top: 12px;
 
   @include respond-to(small-screens) {
     font-size: 22px * 0.9;
