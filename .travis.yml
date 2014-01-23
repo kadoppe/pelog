@@ -14,4 +14,5 @@ deploy:
   on:
     repo: kadoppe/pelog
   run:
+  - rake db:migrate
   - rake articles:sync
