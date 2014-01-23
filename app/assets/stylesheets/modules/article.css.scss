@@ -59,6 +59,10 @@
     font-size: $articleTextFontSize * 0.9
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   h3 {
     font-size: $articleH3FontSize;
     font-weight: normal;
