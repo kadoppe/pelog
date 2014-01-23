@@ -1,22 +1,8 @@
 @import 'globals/all';
 
-.article {
-  padding-bottom: 60px;
-
-  @include respond-to(small-screens) {
-    padding-bottom: 60px * 0.7;
-  }
-}
-
 .article-list {
   list-style-type: none;
-  margin-top: 40px;
-  padding-bottom: 30px;
   padding-left: 0;
-}
-
-.article-item {
-  margin-top: 40px;
 }
 
 .article-item-meta {

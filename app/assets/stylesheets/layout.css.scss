@@ -18,6 +18,14 @@ $max-width: em(730);
   text-align: right;
 }
 
+.l-article-container {
+  padding-bottom: 60px;
+
+  @include respond-to(small-screens) {
+    padding-bottom: 60px * 0.7;
+  }
+}
+
 .l-article-row {
   margin-top: 80px;
 
