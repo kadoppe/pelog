@@ -13,12 +13,15 @@ html
 
     footer.footer
       .l-container
-        .footer-badges
-          a.badge href="https://travis-ci.org/kadoppe/pelog"
-            img src="https://travis-ci.org/kadoppe/pelog.png?branch=master"
+        .l-footer-left
+          | Copyright &copy; #{Time.now.year} by @kadoppe
+        .l-footer-right
+          .footer-badges
+            a.badge href="https://travis-ci.org/kadoppe/pelog"
+              img src="https://travis-ci.org/kadoppe/pelog.png?branch=master"
 
-          a.badge href="https://coveralls.io/r/kadoppe/pelog?branch=master"
-            img src="https://coveralls.io/repos/kadoppe/pelog/badge.png?branch=master"
+            a.badge href="https://coveralls.io/r/kadoppe/pelog?branch=master"
+              img src="https://coveralls.io/repos/kadoppe/pelog/badge.png?branch=master"
 
-          a.badge href="https://codeclimate.com/github/kadoppe/pelog"
-            img src="https://codeclimate.com/github/kadoppe/pelog.png"
+            a.badge href="https://codeclimate.com/github/kadoppe/pelog"
+              img src="https://codeclimate.com/github/kadoppe/pelog.png"
