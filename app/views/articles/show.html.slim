@@ -5,13 +5,8 @@ nav.nav
         a href="/" pelog
 
     .l-nav-right
-      .nav-icons.social-icons
-        a.social-icon href="https://twitter.com/kadoppe"
-          i.fa.fa-2x.fa-twitter
-        a.social-icon href="https://github.com/kadoppe"
-          i.fa.fa-2x.fa-github
-        a.social-icon href="http://feeds.feedburner.com/creativestylerss"
-          i.fa.fa-2x.fa-rss
+      .nav-icons
+        = render partial: 'shared/social_icons'
 
 .l-container
   .l-article-container
@@ -32,13 +27,8 @@ nav.nav
         .article-body== @article.body
 
       .l-article-row
-        .article-icons.social-icons
-          a.social-icon href="https://twitter.com/kadoppe"
-            i.fa.fa-2x.fa-twitter
-          a.social-icon href="https://github.com/kadoppe"
-            i.fa.fa-2x.fa-github
-          a.social-icon href="http://feeds.feedburner.com/creativestylerss"
-            i.fa.fa-2x.fa-rss
+        .article-icons
+          = render partial: 'shared/social_icons'
 
       .l-article-row
         #disqus_thread
