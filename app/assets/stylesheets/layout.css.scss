@@ -1,5 +1,6 @@
 @import 'bourbon';
 @import 'neat';
+@import 'globals/all';
 
 $max-width: em(730);
 
@@ -16,3 +17,12 @@ $max-width: em(730);
   @include span-columns(6);
   text-align: right;
 }
+
+.l-article-row {
+  margin-top: 80px;
+
+  @include respond-to(small-screens) {
+    margin-top: 80px * 0.7;
+  }
+}
+
