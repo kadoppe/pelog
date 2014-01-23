@@ -20,6 +20,7 @@ group :default do
   gem "foreman"
   gem "kramdown"
   gem "neat"
+  gem "newrelic_rpm"
   gem "normalize-rails"
   gem "puma"
   gem "slim"
