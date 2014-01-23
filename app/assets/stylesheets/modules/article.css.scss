@@ -76,12 +76,24 @@
     }
   }
 
-  p {
+  p, ul {
     margin: 17px 0;
     line-height: 2;
 
     @include respond-to(small-screens) {
       margin: (17px * 0.7) 0;
+    }
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+
+  li {
+    margin: 5px 0;
+
+    @include respond-to(small-screens) {
+      margin: (5px * 0.7) 0;
     }
   }
 }
