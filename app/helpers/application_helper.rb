@@ -8,11 +8,23 @@ module ApplicationHelper
     end
   end
 
-  def blog_description
-    'A blog written by kadoppe.'
+  def blog_description(article=nil)
+    if article.present?
+      article.snippet
+    else
+      'A blog written by kadoppe.'
+    end
   end
 
   def blog_author
     'kadoppe'
+  end
+
+  def canonical_url(article=nil)
+    if article.present?
+      article_permalink(article, true)
+    else
+      root_url
+    end
   end
 end
