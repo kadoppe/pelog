@@ -2,9 +2,11 @@
 
 .article {
   margin-top: 80px;
+  padding-bottom: 60px;
 
   @include respond-to(small-screens) {
     margin-top: 80px * 0.7;
+    padding-bottom: 60px * 0.7;
   }
 }
 
