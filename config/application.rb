@@ -12,5 +12,6 @@ module Pelog
     config.active_record.default_timezone = :local
 
     config.i18n.default_locale = :ja
+    I18n.enforce_available_locales = false
   end
 end
