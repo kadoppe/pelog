@@ -16,24 +16,21 @@
   line-height: 1.4;
   margin-top: 5px;
 
-  & a {
-    color: $highlightedColor;
-
-    &:hover {
-      color: $moreHighlightedColor;
-    }
-  }
-
   @include respond-to(small-screens) {
     font-size: $articleTitleFontSize * 0.8;
   }
 }
 
 .article-snippet {
+  color: $textColor;
   display: block;
   font-size: $articleTextFontSize;
   font-style: italic;
   margin-top: 8px;
+
+  &:hover {
+    color: $textColor;
+  }
 
   @include respond-to(small-screens) {
     font-size: $articleTextFontSize * 0.9;
@@ -45,14 +42,6 @@
 
   @include respond-to(small-screens) {
     font-size: $articleTextFontSize * 0.9
-  }
-
-  & a {
-    color: $highlightedColor;
-
-    &:hover {
-      color: $moreHighlightedColor;
-    }
   }
 
   h3 {

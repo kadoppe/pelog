@@ -6,6 +6,7 @@
 .social-icon {
   display: inline-block;
   margin-left: 20px;
+  color: $textColor;
 
   &:hover {
     color: $moreHighlightedColor;

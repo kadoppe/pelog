@@ -4,7 +4,7 @@
   margin-top: 80px;
   margin-bottom: 80px;
 
-  h1.error-header {
+  .error-header {
     color: $moreHighlightedColor;
   }
 
@@ -12,11 +12,4 @@
     margin-top: 15px;
   }
 
-  a {
-    color: $highlightedColor;
-
-    &:hover {
-      color: $moreHighlightedColor;
-    }
-  }
 }
