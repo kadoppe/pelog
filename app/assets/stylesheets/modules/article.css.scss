@@ -25,9 +25,9 @@
 }
 
 .article-snippet {
-  color: $textColor;
+  color: textColor;
   display: block;
-  font-size: $articleTextFontSize;
+  font-size: 16px;
   font-style: italic;
   margin-top: 8px;
 
@@ -36,7 +36,7 @@
   }
 
   @include respond-to(small-screens) {
-    font-size: $articleTextFontSize * 0.9;
+    font-size: 16px * 0.9;
   }
 }
 
