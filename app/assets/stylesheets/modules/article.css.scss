@@ -76,12 +76,23 @@
     }
   }
 
-  p, ul, ol, blockquote {
+
+
+  p, ul, ol, blockquote, pre {
     margin: 20px 0;
     line-height: 2;
 
     @include respond-to(small-screens) {
       margin: (17px * 0.7) 0;
+    }
+  }
+
+  p, ul, ol, blockquote {
+    code {
+      padding: 4px;
+      background-color: $headerBackgroundColor;
+      border: 1px solid #BBBBBB;
+      border-radius: 2px;
     }
   }
 
@@ -115,13 +126,18 @@
 
   code {
     font-family: $monospace;
+  }
+
+  pre {
+    line-height: 1.4;
     background-color: $headerBackgroundColor;
-    padding: 4px;
     border: 1px solid #BBBBBB;
     border-radius: 2px;
-  }
+    padding: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;}
 }
-
 
 .article-icons {
   text-align: center;
