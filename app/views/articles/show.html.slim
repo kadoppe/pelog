@@ -15,24 +15,36 @@ nav.nav
 
 .l-container
   article.article
-    ul.article-item-meta
-      li.article-item-meta-item= @article.published_at.strftime('%Y/%m/%d')
+    .l-article-row
+      ul.article-item-meta
+        li.article-item-meta-item= @article.published_at.strftime('%Y/%m/%d')
 
-    h1.article-title
-      a href="#{article_permalink(@article)}"
-        = @article.title
+      h1.article-title
+        a href="#{article_permalink(@article)}"
+          = @article.title
 
-    p.article-snippet= @article.snippet
+      p.article-snippet= @article.snippet
 
-    .article-body== @article.body
+    .l-article-row
+      .article-body== @article.body
 
-    #disqus_thread
-    javascript:
-      var disqus_shortname = 'pelog-kadoppe'; // required: replace example with your forum shortname
+    .l-article-row
+      .article-icons.social-icons
+        a.social-icon href="https://twitter.com/kadoppe"
+          i.fa.fa-2x.fa-twitter
+        a.social-icon href="https://github.com/kadoppe"
+          i.fa.fa-2x.fa-github
+        a.social-icon href="http://feeds.feedburner.com/creativestylerss"
+          i.fa.fa-2x.fa-rss
 
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
+    .l-article-row
+      #disqus_thread
+      javascript:
+        var disqus_shortname = 'pelog-kadoppe'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
 
