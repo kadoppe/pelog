@@ -15,4 +15,10 @@ describe ArticlesController do
     before { Article.stub(:find_by).and_return(article) }
     specify { subject and expect(assigns[:article]).to eq(article) }
   end
+
+  describe 'GET feed' do
+    subject { get :feed }
+    before { Article.stub(:all).and_return(articles) }
+    specify { subject and expect(assigns[:articles]).to eq(articles) }
+  end
 end
