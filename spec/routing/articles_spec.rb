@@ -1,11 +1,15 @@
 require 'spec_helper'
 
 describe 'routing to articles' do
-  it 'routes /articles/:permalink to articles#show for permalink' do
-    expect(get: '/articles/2014/01/slug.html').to route_to(
+  it 'routes /:year/:month/:day/:slug.html to articles#show' do
+    expect(get: '/2014/01/01/slug.html').to route_to(
       controller: 'articles',
       action: 'show',
-      permalink: '2014/01/slug.html',
+      year: '2014',
+      month: '01',
+      day: '01',
+      slug: 'slug',
+      format: 'html'
     )
   end
 end

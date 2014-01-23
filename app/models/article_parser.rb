@@ -17,7 +17,6 @@ class ArticleParser
       if front_matter.present?
         article.title = front_matter[:title]
         article.snippet = front_matter[:snippet]
-        article.permalink = front_matter[:permalink]
       end
 
       article.save!
