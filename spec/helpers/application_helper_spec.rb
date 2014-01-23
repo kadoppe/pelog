@@ -11,4 +11,12 @@ describe ApplicationHelper do
       it { should eq("#{article.title} | pelog") }
     end
   end
+
+  describe '#blog_description' do
+    context 'for article page' do
+      let (:article) { FactoryGirl.build :article }
+      subject { helper.blog_description(article) }
+      it { should eq(article.snippet) }
+    end
+  end
 end
