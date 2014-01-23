@@ -1,10 +1,9 @@
 module ApplicationHelper
   def blog_title(article=nil)
-    blog_title = 'pe::log'
     if article.present?
-      "#{article.title} | #{blog_title}"
+      "#{article.title} | #{blog_name}"
     else
-      blog_title
+      blog_name
     end
   end
 
@@ -26,5 +25,9 @@ module ApplicationHelper
     else
       root_url
     end
+  end
+
+  def blog_name
+    'pe::log'
   end
 end
