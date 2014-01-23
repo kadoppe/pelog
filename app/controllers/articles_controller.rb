@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find_by(
+    @article = Article.find_by!(
       published_at: date_from_params,
       slug: params[:slug]
     )

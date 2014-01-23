@@ -11,8 +11,8 @@ describe ArticlesController do
   end
 
   describe 'GET show' do
-    subject { get :show, year: '2014', month: '1', day: '1', slug: 'slug' }
-    before { Article.stub(:find_by).and_return(article) }
+    subject { get :show, year: '2014', month: '01', day: '01', slug: 'slug', format: :html }
+    before { Article.stub(:find_by!).and_return(article) }
     specify { subject and expect(assigns[:article]).to eq(article) }
   end
 
