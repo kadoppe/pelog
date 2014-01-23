@@ -4,6 +4,10 @@
   background-color: $headerBackgroundColor;
   text-align: center;
   padding-bottom: 40px;
+
+  @include respond-to(small-screens) {
+    padding-bottom: 40px * 0.7;
+  }
 }
 
 .hero-logo {
@@ -13,7 +17,7 @@
   width: 96px;
 
   @include respond-to(small-screens) {
-    margin-top: 60px * 0.7;
+    margin-top: 50px * 0.7;
     height: 96px * 0.8;
     width: 96px * 0.8;
     border-radius: 48px * 0.8;
