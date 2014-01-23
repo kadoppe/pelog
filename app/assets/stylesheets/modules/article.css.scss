@@ -76,8 +76,8 @@
     }
   }
 
-  p, ul {
-    margin: 17px 0;
+  p, ul, ol {
+    margin: 20px 0;
     line-height: 2;
 
     @include respond-to(small-screens) {
@@ -87,6 +87,10 @@
 
   ul {
     padding-left: 28px;
+  }
+
+  ol {
+    padding-left: 34px;
   }
 
   li {
