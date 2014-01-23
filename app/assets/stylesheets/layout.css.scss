@@ -20,11 +20,21 @@ $max-width: em(730);
 
 .l-footer-left {
   @include span-columns(6);
+
+  @include respond-to(small-screens) {
+    width: 100%;
+  }
 }
 
 .l-footer-right {
   @include span-columns(6);
   text-align: right;
+
+  @include respond-to(small-screens) {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left
+  }
 }
 
 .l-article-container {
