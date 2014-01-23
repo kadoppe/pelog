@@ -21,9 +21,9 @@ header
             li.article-item-meta-item= article.published_at.strftime('%Y/%m/%d')
 
           h3.article-title
-            a href="#{article_path(permalink: article.permalink)}"
+            a href="#{article_permalink(article)}"
               = article.title
 
-          a.article-snippet href="#{article_path(permalink: article.permalink)}"
+          a.article-snippet href="#{article_permalink(article)}"
             p= article.snippet
 
