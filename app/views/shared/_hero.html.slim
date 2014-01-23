@@ -5,10 +5,5 @@ header
       h1.hero-title pelog
       p.hero-description A blog written by kadoppe.
 
-      .hero-icons.social-icons
-        a.social-icon href="https://twitter.com/kadoppe"
-          i.fa.fa-2x.fa-twitter
-        a.social-icon href="https://github.com/kadoppe"
-          i.fa.fa-2x.fa-github
-        a.social-icon href="http://feeds.feedburner.com/creativestylerss"
-          i.fa.fa-2x.fa-rss
+      .hero-icons
+        = render partial: 'shared/social_icons'
