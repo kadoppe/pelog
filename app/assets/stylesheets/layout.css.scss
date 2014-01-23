@@ -18,6 +18,15 @@ $max-width: em(730);
   text-align: right;
 }
 
+.l-footer-left {
+  @include span-columns(6);
+}
+
+.l-footer-right {
+  @include span-columns(6);
+  text-align: right;
+}
+
 .l-article-container {
   padding-bottom: 60px;
 
