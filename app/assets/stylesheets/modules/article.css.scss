@@ -112,7 +112,16 @@
       padding-left: (20px * 0.7);
     }
   }
+
+  code {
+    font-family: $monospace;
+    background-color: $headerBackgroundColor;
+    padding: 4px;
+    border: 1px solid #BBBBBB;
+    border-radius: 2px;
+  }
 }
+
 
 .article-icons {
   text-align: center;
