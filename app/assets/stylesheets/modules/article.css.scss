@@ -86,15 +86,11 @@
   }
 
   ul {
-    padding-left: 24px;
+    padding-left: 28px;
   }
 
   li {
-    margin: 5px 0;
-
-    @include respond-to(small-screens) {
-      margin: (5px * 0.7) 0;
-    }
+    margin: 0;
   }
 }
 
