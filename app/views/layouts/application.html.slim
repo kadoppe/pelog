@@ -7,10 +7,10 @@ html
 
     meta content=blog_description name="description"
     meta content=image_url('ogp-logo.png') property="og:image"
-    meta content=root_url property="og:url"
+    meta content=request.url property="og:url"
     meta content=blog_title property="og:site_name"
-    meta content=blog_title property="og:title"
-    meta content=blog_description name="og:description"
+    meta content=blog_title(@article) property="og:title"
+    meta content=blog_description(@article) name="og:description"
     meta content="blog" name="og:type"
 
     meta content="summary" name="twitter:card"
