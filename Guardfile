@@ -1,7 +1,12 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+guard 'rake', :task => 'articles:sync' do
+  watch(%r{app/articles/.+\.md})
+end
+
 guard 'livereload' do
+  watch(%r{app/articles/.+\.md})
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})

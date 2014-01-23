@@ -93,7 +93,7 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.0)
       multi_json (~> 1.8)
-    guard-rake (0.0.9)
+    guard-rake (0.0.7)
       guard
       rake
     hike (1.2.3)
@@ -258,7 +258,7 @@ DEPENDENCIES
   foreman
   guard
   guard-livereload
-  guard-rake
+  guard-rake (= 0.0.7)
   hirb
   hirb-unicode
   jbuilder (~> 1.2)
