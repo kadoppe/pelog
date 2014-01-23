@@ -39,7 +39,6 @@ describe ArticleParser do
     subject { ArticleParser.extract_front_matter(file_path) }
     its([:title]) { should eq('Test Title') }
     its([:snippet]) { should eq('Test Snippet') }
-    its([:permalink]) { should eq('Test/Permalink') }
 
     context 'when article have no front matter' do
       let (:file_path) { "#{Rails.root}/spec/articles/2014-01-20-no-front-matter.md" }

@@ -19,7 +19,7 @@ nav.nav
       li.article-item-meta-item= @article.published_at.strftime('%Y/%m/%d')
 
     h1.article-title
-      a href="#{article_path(permalink: @article.permalink)}"
+      a href="#{article_permalink(@article)}"
         = @article.title
 
     p.article-snippet= @article.snippet
