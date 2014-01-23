@@ -5,8 +5,24 @@ html
 
     meta content="width=device-width, initial-scale=1" name="viewport"
 
+    meta content=blog_description name="description"
+    meta content=image_url('ogp-logo.png') property="og:image"
+    meta content=request.url property="og:url"
+    meta content=blog_title property="og:site_name"
+    meta content=blog_title(@article) property="og:title"
+    meta content=blog_description(@article) name="og:description"
+    meta content="blog" name="og:type"
+
+    meta content="summary" name="twitter:card"
+    meta value="@kadoppe" name="twitter:creator"
+
+    meta content="1313172024" property="fb:admins"
+    meta content="105377402840503" property="fb:admins"
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+    link rel='canonical' href=canonical_url
 
   body
     == yield
