@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Pelog::Application.config.secret_key_base = '806524d6f512a059e6eaeb5451c11c4c684675234d9cb53ae56735d3f4001d4512c14a135bfd910bed1ef9208036c6d2f224a5d0f2725c6a8a2e4746a0f49a3d'
+Pelog::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'] || '806524d6f512a059e6eaeb5451c11c4c684675234d9cb53ae56735d3f4001d4512c14a135bfd910bed1ef9208036c6d2f224a5d0f2725c6a8a2e4746a0f49a3d'
