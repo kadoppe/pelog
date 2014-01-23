@@ -2,8 +2,8 @@ header
   .hero
     .l-container
       = image_tag 'logo.png', class: 'hero-logo'
-      h1.hero-title pelog
-      p.hero-description A blog written by kadoppe.
+      h1.hero-title= blog_title
+      p.hero-description= blog_description
 
       .hero-icons
         = render partial: 'shared/social_icons'
