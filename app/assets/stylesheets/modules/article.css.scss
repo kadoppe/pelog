@@ -76,12 +76,70 @@
     }
   }
 
-  p {
-    margin: 17px 0;
+  p, ul, ol, blockquote, pre, img {
     line-height: 2;
+    margin: 20px 0;
 
     @include respond-to(small-screens) {
       margin: (17px * 0.7) 0;
+    }
+  }
+
+  p, ul, ol, blockquote {
+    code {
+      padding: 4px;
+      background-color: $headerBackgroundColor;
+      border: 1px solid #BBBBBB;
+      border-radius: 2px;
+    }
+  }
+
+  ul {
+    padding-left: 28px;
+  }
+
+  ol {
+    padding-left: 34px;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  blockquote {
+    $color: shade($highlightedColor, 20%);
+    color: $color;
+    border-left: 6px solid $color;
+    padding-left: 20px;
+
+    @include respond-to(small-screens) {
+      border-left: 4px solid $color;
+      padding-left: (20px * 0.7);
+    }
+  }
+
+  code {
+    font-family: $monospace;
+  }
+
+  pre {
+    font-size: 15px;
+    background-color: $headerBackgroundColor;
+    border-radius: 2px;
+    border: 1px solid #BBBBBB;
+    line-height: 1.5;
+    overflow: auto;
+    padding: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    @include respond-to(small-screens) {
+      padding: 12px * 0.7;
+      font-size: 15px * 0.9;
     }
   }
 }
