@@ -3,11 +3,11 @@
 .hero {
   background-color: $headerBackgroundColor;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .hero-logo {
-  margin-top: 60px;
+  margin-top: 50px;
   border-radius: 48px;
   height: 96px;
   width: 96px;
@@ -41,11 +41,10 @@
 }
 
 .hero-icons {
-  margin-top: 40px;
+  margin-top: 25px;
 
   @include respond-to(small-screens) {
-    margin-top: 40px * 0.7;
-    font-size: 0.7em;
+    margin-top: 25px * 0.7;
   }
 }
 
