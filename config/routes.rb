@@ -4,4 +4,6 @@ Pelog::Application.routes.draw do
 
   get '/feed', to: 'articles#feed'
   get '/rss', to: redirect('/feed')
+
+  get '*not_found' => 'application#render_404'
 end
