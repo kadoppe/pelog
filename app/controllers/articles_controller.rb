@@ -11,6 +11,11 @@ class ArticlesController < ApplicationController
     )
   end
 
+  def feed
+    @articles = Article.all
+    render :feed, formats: :xml
+  end
+
   private
 
   def date_from_params

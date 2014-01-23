@@ -12,4 +12,8 @@ describe 'routing to articles' do
       format: 'html'
     )
   end
+
+  it 'routes /feed to articles#feed' do
+    expect(get: '/feed').to route_to(controller: 'articles', action: 'feed')
+  end
 end
