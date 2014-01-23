@@ -1,7 +1,17 @@
 language: ruby
 rvm: 2.1.0
-before_install: "gem install bundler --version '>= 1.5.1'"
-bundler_args: --without development production staging
+before_install: gem install bundler --version '>= 1.5.1'
+bundler_args: "--without development production staging"
 script:
 - bundle exec rake db:migrate RAILS_ENV=test
 - bundle exec rspec .
+deploy:
+  provider: heroku
+  api_key:
+    secure: GZeCvv79mhx1m1DclC4NjNS0ZQqqOmlxfcnQxFTtd0b4OmMUXAO3ZsElTixUG6/5d6ZzUJ3e7HWOo1izJZBZMOBObMYEef+deA5w88vIzKuQNoleeXexPSG75tiyP17gGdBzDqKbbBDts7rufzKqgS0/HJ09TuyXKVkfR6+JhKY=
+  app:
+    master: pelog
+  on:
+    repo: kadoppe/pelog
+  run:
+  - rake articles:sync
