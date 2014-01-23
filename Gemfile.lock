@@ -61,6 +61,7 @@ GEM
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     docile (1.1.2)
+    dotenv (0.9.0)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
@@ -78,6 +79,9 @@ GEM
       rails (>= 3, < 5)
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
     formatador (0.2.4)
     guard (2.3.0)
       formatador (>= 0.2.4)
@@ -132,6 +136,8 @@ GEM
       coolline (~> 0.3)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -239,6 +245,7 @@ DEPENDENCIES
   factory_girl_rails
   figaro
   font-awesome-rails
+  foreman
   guard
   guard-livereload
   hirb
@@ -252,6 +259,7 @@ DEPENDENCIES
   pry-byebug
   pry-coolline
   pry-rails
+  puma
   rack-livereload
   rails (= 4.0.2)
   rake_shared_context
