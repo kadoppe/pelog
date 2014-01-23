@@ -1,0 +1,22 @@
+@import 'globals/all';
+
+.error {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  h1.error-header {
+    color: $moreHighlightedColor;
+  }
+
+  p {
+    margin-top: 15px;
+  }
+
+  a {
+    color: $highlightedColor;
+
+    &:hover {
+      color: $moreHighlightedColor;
+    }
+  }
+}
