@@ -7,8 +7,11 @@
 }
 
 .nav-title {
-  a:hover {
-    color: $moreHighlightedColor;
+  a {
+    color: $textColor;
+    &:hover {
+      color: $moreHighlightedColor;
+    }
   }
 }
 

@@ -9,10 +9,7 @@ describe 'Articles' do
   end
 
   describe 'GET /:year/:month/:day.html' do
-    subject do
-      published_at = article.published_at
-      get "/#{published_at.year}/#{published_at.month}/#{published_at.day}/#{article.slug}.html"
-    end
+    subject { get "/2014/01/01/#{article.slug}.html" }
     specify { subject and expect(response.status).to eq(200) }
   end
 
