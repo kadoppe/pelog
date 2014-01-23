@@ -7,23 +7,32 @@ header
 
       .hero-icons.social-icons
         a.social-icon href="https://twitter.com/kadoppe"
-          i.fa.fa-3x.fa-twitter
+          i.fa.fa-2x.fa-twitter
         a.social-icon href="https://github.com/kadoppe"
-          i.fa.fa-3x.fa-github
+          i.fa.fa-2x.fa-github
         a.social-icon href="http://feeds.feedburner.com/creativestylerss"
-          i.fa.fa-3x.fa-rss
+          i.fa.fa-2x.fa-rss
 
 .l-container
-  ul.article-list
-    - @articles.each do |article|
-        li.article-item
-          ul.article-item-meta
-            li.article-item-meta-item= article.published_at.strftime('%Y/%m/%d')
+  .l-article-container
+    ul.article-list
+      - @articles.each do |article|
+          li.article-item.l-article-row
+            ul.article-item-meta
+              li.article-item-meta-item= article.published_at.strftime('%Y/%m/%d')
 
-          h3.article-title
-            a href="#{article_permalink(article)}"
-              = article.title
+            h3.article-title
+              a href="#{article_permalink(article)}"
+                = article.title
 
-          a.article-snippet href="#{article_permalink(article)}"
-            p= article.snippet
+            a.article-snippet href="#{article_permalink(article)}"
+              p= article.snippet
 
+    .l-article-row
+      .article-icons.social-icons
+        a.social-icon href="https://twitter.com/kadoppe"
+          i.fa.fa-2x.fa-twitter
+        a.social-icon href="https://github.com/kadoppe"
+          i.fa.fa-2x.fa-github
+        a.social-icon href="http://feeds.feedburner.com/creativestylerss"
+          i.fa.fa-2x.fa-rss

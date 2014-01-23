@@ -1,24 +1,8 @@
 @import 'globals/all';
 
-.article {
-  margin-top: 80px;
-  padding-bottom: 60px;
-
-  @include respond-to(small-screens) {
-    margin-top: 80px * 0.7;
-    padding-bottom: 60px * 0.7;
-  }
-}
-
 .article-list {
   list-style-type: none;
-  margin-top: 40px;
-  padding-bottom: 30px;
   padding-left: 0;
-}
-
-.article-item {
-  margin-top: 40px;
 }
 
 .article-item-meta {
@@ -56,18 +40,10 @@
   }
 }
 
-.article-line {
-  margin-top: 30px;
-}
-
 .article-body {
   font-size: $articleTextFontSize;
-  margin-top: 80px;
-  padding-bottom: 60px;
 
   @include respond-to(small-screens) {
-    margin-top: 80px * 0.7;
-    padding-bottom: 60px * 0.7;
     font-size: $articleTextFontSize * 0.9
   }
 
@@ -99,3 +75,8 @@
     }
   }
 }
+
+.article-icons {
+  text-align: center;
+}
+
