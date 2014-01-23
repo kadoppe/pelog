@@ -76,7 +76,7 @@
     }
   }
 
-  p, ul, ol {
+  p, ul, ol, blockquote {
     margin: 20px 0;
     line-height: 2;
 
@@ -99,6 +99,18 @@
 
   img {
     max-width: 100%;
+  }
+
+  blockquote {
+    $color: shade($highlightedColor, 20%);
+    color: $color;
+    border-left: 6px solid $color;
+    padding-left: 20px;
+
+    @include respond-to(small-screens) {
+      border-left: 4px solid $color;
+      padding-left: (20px * 0.7);
+    }
   }
 }
 
