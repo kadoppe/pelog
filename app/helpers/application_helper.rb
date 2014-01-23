@@ -1,6 +1,6 @@
 module ApplicationHelper
   def blog_title(article=nil)
-    blog_title = 'pelog'
+    blog_title = 'pe::log'
     if article.present?
       "#{article.title} | #{blog_title}"
     else
