@@ -31,6 +31,14 @@
   margin-top: 3px;
   line-height: 1;
 
+  a {
+    color: $textColor;
+
+    &:hover {
+      color: $moreHighlightedColor;
+    }
+  }
+
   @include respond-to(small-screens) {
     font-size: 60px * 0.8;
   }
