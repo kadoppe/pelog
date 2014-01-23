@@ -1,4 +1,5 @@
 @import 'globals/all';
+@import 'bourbon';
 
 .hero {
   background-color: $headerBackgroundColor;
@@ -25,6 +26,7 @@
 }
 
 .hero-title {
+  font-family: $helvetica;
   font-size: 60px;
   margin-top: 5px;
   line-height: 1;

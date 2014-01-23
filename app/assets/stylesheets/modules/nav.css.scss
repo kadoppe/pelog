@@ -1,4 +1,5 @@
 @import 'globals/all';
+@import 'bourbon';
 
 .nav {
   background-color: $headerBackgroundColor;
@@ -7,6 +8,8 @@
 }
 
 .nav-title {
+  font-family: $helvetica;
+
   a {
     color: $textColor;
     &:hover {
