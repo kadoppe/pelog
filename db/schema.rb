@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123091100) do
+ActiveRecord::Schema.define(version: 20140124052632) do
 
   create_table "articles", force: true do |t|
     t.string "slug"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140123091100) do
     t.text   "snippet",      limit: 255
   end
 
+  add_index "articles", ["published_at", "slug"], name: "index_articles_on_published_at_and_slug"
   add_index "articles", ["published_at"], name: "index_articles_on_published_at"
-  add_index "articles", ["slug"], name: "index_articles_on_published_year_and_published_month_and_slug", unique: true
 
 end
