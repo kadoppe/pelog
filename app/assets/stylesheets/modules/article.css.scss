@@ -29,6 +29,7 @@
   display: block;
   font-size: 16px;
   font-style: italic;
+  line-height: 1.8;
   margin-top: 8px;
 
   &:hover {
@@ -67,21 +68,22 @@
     font-size: $articleH3FontSize;
     font-weight: normal;
     line-height: 1.4;
-    margin: 80px 0 30px;
+    margin: 80px 0 25px;
     color: $highlightedColor;
 
     @include respond-to(small-screens) {
-      margin: (100px * 0.7) 0 (30px * 0.7);
+      margin: (80px * 0.7) 0 (25px * 0.7);
       font-size: $articleH3FontSize * 0.9;
     }
   }
 
   p, ul, ol, blockquote, pre, img {
     line-height: 2;
-    margin: 20px 0;
+    margin: 25px 0;
 
     @include respond-to(small-screens) {
-      margin: (17px * 0.7) 0;
+      line-height: 1.9;
+      margin: (25px * 0.7) 0;
     }
   }
 
