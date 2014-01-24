@@ -18,6 +18,7 @@ group :default do
   gem "bourbon"
   gem "coderay"
   gem "figaro"
+  gem "fog"
   gem "font-awesome-rails"
   gem "foreman"
   gem "kramdown"
