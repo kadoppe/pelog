@@ -89,7 +89,8 @@
 
   p, ul, ol, blockquote {
     code {
-      padding: 4px;
+      padding: 2px 5px;
+      margin: 0 5px;
       background-color: $headerBackgroundColor;
       border: 1px solid #BBBBBB;
       border-radius: 2px;
