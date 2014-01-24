@@ -51,7 +51,7 @@ class ArticleParser
   # @return [String] html body of article
   def self.extract_body(file_path)
     text = File.open(file_path).read
-    text.gsub!(/---\n(.*)---\n/m, '')
+    text.sub!(/---\n.*?---\n/m, '')
     Kramdown::Document.new(
       text,
       auto_ids: false,
@@ -66,7 +66,7 @@ class ArticleParser
   # @return [Hash] yaml tree of front matter
   def self.extract_front_matter(file_path)
     text = File.open(file_path).read
-    m = /---\n(.*)---\n/m.match(text)
+    m = /---\n(.*?)---\n/m.match(text)
     if m.present?
       front_matter = YAML::parse(m[1]).transform.symbolize_keys
 
