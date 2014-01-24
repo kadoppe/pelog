@@ -16,3 +16,4 @@ deploy:
   run:
   - rake db:migrate
   - rake articles:sync
+  - rake sitemap:refresh

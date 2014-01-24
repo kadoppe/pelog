@@ -26,6 +26,7 @@ group :default do
   gem "normalize-rails"
   gem "puma"
   gem "rouge"
+  gem "sitemap_generator"
   gem "slim"
   gem "slim-rails"
 end
