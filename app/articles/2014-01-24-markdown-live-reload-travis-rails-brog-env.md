@@ -68,7 +68,7 @@ $ bundle exec guard start
 
 次に、ブラウザで編集対象の記事を開いておきます。その状態で、Markdownファイルを編集すると、ほぼリアルタイムに編集内容がブラウザ上に反映されます。ファイルを編集する度に、いちいちコマンドを実行したりブラウザを更新したりしなくて済むので、とても快適です。
 
-![Live reloading](/assets/2014/01/24/live-reloading.png)
+![Live reloading](/images/2014/01/24/live-reloading.png)
 
 
 ### Travis CIによる記事の自動公開
