@@ -26,13 +26,6 @@ $max-width: em(730);
   }
 }
 
-.l-article-container {
-  padding-bottom: 60px;
-
-  @include respond-to(small-screens) {
-    padding-bottom: 60px * 0.7;
-  }
-}
 
 .l-row {
   margin-top: 80px;
