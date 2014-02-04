@@ -9,16 +9,7 @@ $max-width: em(730);
   padding: 0 15px;
 }
 
-.l-nav-left {
-  @include span-columns(6);
-}
-
-.l-nav-right {
-  @include span-columns(6);
-  text-align: right;
-}
-
-.l-footer-left {
+.l-left {
   @include span-columns(6);
 
   @include respond-to(small-screens) {
@@ -26,14 +17,12 @@ $max-width: em(730);
   }
 }
 
-.l-footer-right {
+.l-right {
   @include span-columns(6);
   text-align: right;
 
   @include respond-to(small-screens) {
-    margin-top: 20px;
-    width: 100%;
-    text-align: left
+    display: none;
   }
 }
 
