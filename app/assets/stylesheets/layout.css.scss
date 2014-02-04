@@ -45,7 +45,7 @@ $max-width: em(730);
   }
 }
 
-.l-article-row {
+.l-row {
   margin-top: 80px;
 
   @include respond-to(small-screens) {

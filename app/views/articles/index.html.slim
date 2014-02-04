@@ -4,7 +4,7 @@
   .l-article-container
     ul.article-list
       - @articles.each do |article|
-          li.article-item.l-article-row
+          li.l-row.article-item
             ul.article-item-meta
               li.article-item-meta-item
                 time datetime=article.published_at.to_datetime
@@ -17,7 +17,7 @@
             a.article-snippet href="#{article_permalink(article)}"
               p= article.snippet
 
-    .l-article-row
+    .l-row
       .article-icons.social-icons
         a.social-icon href="https://twitter.com/kadoppe"
           i.fa.fa-2x.fa-twitter

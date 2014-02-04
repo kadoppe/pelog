@@ -11,7 +11,7 @@ nav.nav
 .l-container
   .l-article-container
     article.article
-      .l-article-row
+      .l-row
         ul.article-item-meta
           li.article-item-meta-item
             time datetime=@article.published_at.to_datetime
@@ -23,14 +23,14 @@ nav.nav
 
         p.article-snippet= @article.snippet
 
-      .l-article-row
+      .l-row
         .article-body== @article.body
 
-      .l-article-row
+      .l-row
         .article-icons
           = render partial: 'shared/social_icons'
 
-      .l-article-row
+      .l-row
         #disqus_thread
         javascript:
           var disqus_shortname = 'pelog-kadoppe'; // required: replace example with your forum shortname
