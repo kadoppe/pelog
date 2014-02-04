@@ -1,43 +1,42 @@
 nav.nav
   .l-container
-    .l-nav-left
+    .l-left
       h1.nav-title
         a href="/"= blog_title
 
-    .l-nav-right
+    .l-right
       .nav-icons
         = render partial: 'shared/social_icons'
 
 .l-container
-  .l-article-container
-    article.article
-      .l-article-row
-        ul.article-item-meta
-          li.article-item-meta-item
-            time datetime=@article.published_at.to_datetime
-              = @article.published_at.strftime('%Y/%m/%d')
+  article.article
+    .l-row
+      ul.article-item-meta
+        li.article-item-meta-item
+          time datetime=@article.published_at.to_datetime
+            = @article.published_at.strftime('%Y/%m/%d')
 
-        h1.article-title
-          a href="#{article_permalink(@article)}"
-            = @article.title
+      h1.article-title
+        a href="#{article_permalink(@article)}"
+          = @article.title
 
-        p.article-snippet= @article.snippet
+      p.article-snippet= @article.snippet
 
-      .l-article-row
-        .article-body== @article.body
+    .l-row
+      .article-body== @article.body
 
-      .l-article-row
-        .article-icons
-          = render partial: 'shared/social_icons'
+    .l-row
+      .article-icons
+        = render partial: 'shared/social_icons'
 
-      .l-article-row
-        #disqus_thread
-        javascript:
-          var disqus_shortname = 'pelog-kadoppe'; // required: replace example with your forum shortname
+    .l-row
+      #disqus_thread
+      javascript:
+        var disqus_shortname = 'pelog-kadoppe'; // required: replace example with your forum shortname
 
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
 
