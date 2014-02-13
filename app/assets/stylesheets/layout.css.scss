@@ -6,7 +6,7 @@ $max-width: em(730);
 
 .l-container {
   @include outer-container;
-  padding: 0 15px;
+  padding: 0 15px 60px;
 }
 
 .l-left {
