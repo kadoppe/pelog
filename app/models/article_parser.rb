@@ -1,6 +1,12 @@
 class ArticleParser
   FILE_PATH_PATTERN = "#{Rails.root}/app/articles/*.md"
 
+  DEFAULT_MARKDOWN_DIR = "#{Rails.root}/app/articles/"
+
+  def initialize(markdown_dir = DEFAULT_MARKDOWN_DIR)
+    @filepath_pattern = markdown_dir + '*.md'
+  end
+
   # Sync database record with markdown files
   def sync
     before_ids = Article.all.pluck(:id)
@@ -30,7 +36,7 @@ class ArticleParser
 
   # Get all markdown file paths
   def file_paths
-    Dir.glob(FILE_PATH_PATTERN).sort
+    Dir.glob(@filepath_pattern).sort
   end
 
   # Extract meta data of article
