@@ -1,8 +1,14 @@
 class ArticleParser
   FILE_PATH_PATTERN = "#{Rails.root}/app/articles/*.md"
 
+  DEFAULT_MARKDOWN_DIR = "#{Rails.root}/app/articles/"
+
+  def initialize(markdown_dir = DEFAULT_MARKDOWN_DIR)
+    @filepath_pattern = markdown_dir + '*.md'
+  end
+
   # Sync database record with markdown files
-  def self.sync
+  def sync
     before_ids = Article.all.pluck(:id)
     after_ids = []
 
@@ -29,15 +35,15 @@ class ArticleParser
   end
 
   # Get all markdown file paths
-  def self.file_paths
-    Dir.glob(FILE_PATH_PATTERN).sort
+  def file_paths
+    Dir.glob(@filepath_pattern).sort
   end
 
   # Extract meta data of article
   #
   # @param file_path [String] markdown file path
   # @return [Hash] meta data of article
-  def self.extract_meta_data(file_path)
+  def extract_meta_data(file_path)
     m = /(\d{4})-(\d{2})-(\d{2})-(.+)\.md/.match(file_path)
     {
       published_at: Date.new(m[1].to_i, m[2].to_i, m[3].to_i),
@@ -49,7 +55,7 @@ class ArticleParser
   #
   # @param file_path [String] markdown file path
   # @return [String] html body of article
-  def self.extract_body(file_path)
+  def extract_body(file_path)
     text = File.open(file_path).read
     text.sub!(/---\n.*?---\n/m, '')
     Kramdown::Document.new(
@@ -64,7 +70,7 @@ class ArticleParser
   #
   # @param file_path [String] markdown file path
   # @return [Hash] yaml tree of front matter
-  def self.extract_front_matter(file_path)
+  def extract_front_matter(file_path)
     text = File.open(file_path).read
     m = /---\n(.*?)---\n/m.match(text)
     if m.present?
