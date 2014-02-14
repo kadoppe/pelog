@@ -4,6 +4,18 @@
 .article-list {
   list-style-type: none;
   padding-left: 0;
+  padding-bottom: 80px;
+
+  @include respond-to(small-screens) {
+    padding-bottom: 80px * 0.7;
+  }
+}
+
+.article {
+  padding-bottom: 40px;
+  @include respond-to(small-screens) {
+    padding-bottom: 40px * 0.7;
+  }
 }
 
 .article-item-meta {
