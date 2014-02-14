@@ -51,11 +51,12 @@ group :development do
 end
 
 group :development, :test do
-  gem 'coveralls', require: false
   gem "factory_girl_rails"
-  gem 'rake_shared_context'
   gem "rspec-rails"
   gem "spring"
+  gem "turnip"
+  gem 'coveralls', require: false
+  gem 'rake_shared_context'
   gem 'sqlite3'
 end
 
