@@ -111,6 +111,13 @@
 
   ul {
     padding-left: 28px;
+
+    > li > ul {
+      margin: 10px 0;
+      @include respond-to(small-screens) {
+        margin: 7px 0;
+      }
+    }
   }
 
   ol {
