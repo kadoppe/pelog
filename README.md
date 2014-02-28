@@ -5,4 +5,4 @@
 [![Code Climate](https://codeclimate.com/github/kadoppe/pelog.png)](https://codeclimate.com/github/kadoppe/pelog)
 [![Dependency Status](https://gemnasium.com/kadoppe/pelog.png)](https://gemnasium.com/kadoppe/pelog)
 
-My blog application.
+My blog publishing system. http://blog.kadoppe.com
