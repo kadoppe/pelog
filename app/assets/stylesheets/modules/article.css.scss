@@ -91,11 +91,20 @@
 
   p, ul, ol, blockquote, pre, img {
     line-height: 2;
-    margin: 25px 0;
+    margin: 20px 0;
 
     @include respond-to(small-screens) {
       line-height: 1.9;
-      margin: (25px * 0.7) 0;
+      margin: (20px * 0.7) 0;
+    }
+  }
+
+  h4 {
+    font-size: $articleH4FontSize;
+    margin-top: 50px;
+    @include respond-to(small-screens) {
+      margin-top: 50px * 0.7;
+      font-size: $articleH4FontSize * 0.9;
     }
   }
 
