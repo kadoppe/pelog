@@ -22,12 +22,28 @@ nav.nav
 
       p.article-snippet= @article.snippet
 
+    .l-low
+      .article-share-buttons
+        .twitter
+          a.twitter-share-button href="https://twitter.com/share" data-via="kadoppe" data-lang="ja" ツイート
+        .facebook
+          .fb-like data-href="#{article_permalink(@article, true)}" data-layout='button_count' data-send='false' data-show-faces='false'
+        .hatena
+          a.hatena-bookmark-button href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"
+            img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"
+
     .l-row
       .article-body== @article.body
 
     .l-row
-      .article-icons
-        = render partial: 'shared/social_icons'
+      .article-share-buttons
+        .twitter
+          a.twitter-share-button href="https://twitter.com/share" data-via="kadoppe" data-lang="ja" ツイート
+        .facebook
+          .fb-like data-href="#{article_permalink(@article, true)}" data-layout='button_count' data-send='false' data-show-faces='false'
+        .hatena
+          a.hatena-bookmark-button href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"
+            img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"
 
     .l-row
       #disqus_thread
