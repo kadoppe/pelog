@@ -228,6 +228,10 @@ GEM
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
       rspec-mocks (~> 3.0.0)
+    rspec-activemodel-mocks (1.0.1)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      rspec-mocks (>= 2.99, < 4.0)
     rspec-core (3.0.3)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.3)
@@ -349,6 +353,7 @@ DEPENDENCIES
   rb-fsevent
   request_profiler
   rouge
+  rspec-activemodel-mocks
   rspec-its
   rspec-rails
   sass-rails (~> 4.0.0)

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Articles' do
+describe 'Articles', :type => :request do
   let (:article) { FactoryGirl.create :article }
 
   describe 'GET /' do

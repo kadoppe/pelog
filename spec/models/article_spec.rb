@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Article do
+describe Article, :type => :model do
   let (:article) { FactoryGirl.create(:article) }
 
   describe 'default scope' do
@@ -14,6 +14,6 @@ describe Article do
 
   describe '#github_url' do
     subject { article.github_url }
-    it { should eq 'https://github.com/kadoppe/pelog/tree/master/app/articles/2014-01-01-test.html' }
+    it { is_expected.to eq 'https://github.com/kadoppe/pelog/tree/master/app/articles/2014-01-01-test.html' }
   end
 end

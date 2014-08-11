@@ -59,6 +59,7 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'coveralls', require: false
   gem 'rake_shared_context'
+  gem 'rspec-activemodel-mocks'
   gem 'rspec-its'
   gem 'sqlite3'
 end
