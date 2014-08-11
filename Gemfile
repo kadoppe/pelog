@@ -55,10 +55,12 @@ group :development, :test do
   gem "rspec-rails"
   gem "spring"
   gem "turnip"
-  gem 'capybara', '2.0.3'
+  gem 'capybara'
   gem 'capybara-webkit'
   gem 'coveralls', require: false
   gem 'rake_shared_context'
+  gem 'rspec-activemodel-mocks'
+  gem 'rspec-its'
   gem 'sqlite3'
 end
 

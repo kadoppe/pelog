@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'routing to articles' do
+describe 'routing to articles', :type => :routing do
   it 'routes /:year/:month/:day/:slug.html to articles#show' do
     expect(get: '/2014/01/01/slug.html').to route_to(
       controller: 'articles',

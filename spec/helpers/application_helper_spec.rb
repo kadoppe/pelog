@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe ApplicationHelper do
+describe ApplicationHelper, :type => :helper do
   describe '#blog_title' do
     subject { helper.blog_title }
-    it { should eq('pe::log') }
+    it { is_expected.to eq('pe::log') }
 
     context 'for article page' do
       let (:article) { FactoryGirl.build :article }
       subject { helper.blog_title(article) }
-      it { should eq("#{article.title} | pe::log") }
+      it { is_expected.to eq("#{article.title} | pe::log") }
     end
   end
 
@@ -16,18 +16,18 @@ describe ApplicationHelper do
     context 'for article page' do
       let (:article) { FactoryGirl.build :article }
       subject { helper.blog_description(article) }
-      it { should eq(article.snippet) }
+      it { is_expected.to eq(article.snippet) }
     end
   end
 
   describe '#caninocal_url' do
     subject { helper.canonical_url }
-    it { should eq('http://test.host/') }
+    it { is_expected.to eq('http://test.host/') }
 
     context 'for article page' do
       let (:article) { FactoryGirl.build :article }
       subject { helper.canonical_url(article) }
-      it { should eq("http://test.host/2014/01/01/#{article.slug}.html") }
+      it { is_expected.to eq("http://test.host/2014/01/01/#{article.slug}.html") }
     end
   end
 end

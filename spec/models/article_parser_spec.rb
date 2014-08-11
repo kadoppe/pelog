@@ -1,5 +1,5 @@
 require 'spec_helper'
-describe ArticleParser do
+describe ArticleParser, :type => :model do
   let (:file_path) do
     "#{Rails.root}/spec/articles/2014-01-19-slug.md"
   end
@@ -23,7 +23,7 @@ describe ArticleParser do
 
   describe '#file_paths' do
     subject { parser.file_paths }
-    it { should_not be_empty }
+    it { is_expected.not_to be_empty }
   end
 
   describe '#extract_meta_data' do
@@ -34,7 +34,7 @@ describe ArticleParser do
 
   describe '#extract_body' do
     subject { parser.extract_body(file_path) }
-    it { should match(/<h2>/) }
+    it { is_expected.to match(/<h2>/) }
   end
 
   describe '#extract_front_matter' do
@@ -44,7 +44,7 @@ describe ArticleParser do
 
     context 'when article have no front matter' do
       let (:file_path) { "#{Rails.root}/spec/articles/2014-01-20-no-front-matter.md" }
-      it { should be_nil }
+      it { is_expected.to be_nil }
     end
   end
 end
