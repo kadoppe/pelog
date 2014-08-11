@@ -176,6 +176,37 @@
   }
 }
 
+.article-share-buttons {
+  display: inline-block;
+  height: 30px;
+  overflow: hidden;
+  text-align: left;
+  vertical-align: bottom;
+  margin-top: 15px;
+
+  .hatena {
+    float: left;
+    width: 62px;
+    height: 30px;
+    overflow: hidden;
+  }
+
+  .twitter {
+    float: left;
+    width: 100px;
+    height: 30px;
+    overflow:hidden;
+  }
+
+  .facebook {
+    float: left;
+    width: 115px;
+    height: 25px;
+    line-height: 20px;
+    overflow: hidden;
+  }
+}
+
 .article-icons {
   text-align: center;
 }
