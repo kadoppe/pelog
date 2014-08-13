@@ -4,11 +4,11 @@
 .nav {
   background-color: $headerBackgroundColor;
   height: 60px;
-  line-height: 60px;
 }
 
 .nav-title {
   font-family: $helvetica;
+  margin-top: 8px;
 
   a {
     color: $textColor;
@@ -16,9 +16,16 @@
       color: $moreHighlightedColor;
     }
   }
+
+  .nav-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 }
 
 .nav-icons {
-  margin-top: 6px;
+  margin-top: 15px;
 }
 
