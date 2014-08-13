@@ -2,7 +2,9 @@ nav.nav
   .l-container
     .l-left
       h1.nav-title
-        a href="/"= blog_title
+        a href="/"
+          = image_tag 'pelogo-small.png', class: 'nav-logo'
+          = blog_title
 
     .l-right
       .nav-icons
