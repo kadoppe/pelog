@@ -13,15 +13,13 @@
 
 .hero-logo {
   margin-top: 50px;
-  border-radius: 48px;
-  height: 96px;
-  width: 96px;
+  height: 80px;
+  width: 80x;
 
   @include respond-to(small-screens) {
     margin-top: 50px * 0.7;
-    height: 96px * 0.8;
-    width: 96px * 0.8;
-    border-radius: 48px * 0.8;
+    height: 80px;
+    width: 80px;
   }
 }
 
