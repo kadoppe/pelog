@@ -14,6 +14,7 @@ Pelog::Application.routes.draw do
 
   get '/feed', to: 'articles#feed'
   get '/rss', to: redirect('/feed')
+  get '/sitemap', to: redirect("http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz")
 
   get '*not_found' => 'application#render_404'
 end

@@ -1,1 +1,0 @@
-sitemap: http://pelog.s3.amazonaws.com/sitemaps/sitemap.xml.gz
