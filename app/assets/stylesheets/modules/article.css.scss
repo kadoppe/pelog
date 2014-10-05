@@ -36,23 +36,6 @@
   }
 }
 
-.article-snippet {
-  color: $textColor;
-  display: block;
-  font-size: 16px;
-  font-style: italic;
-  line-height: 1.8;
-  margin-top: 8px;
-
-  &:hover {
-    color: $textColor;
-  }
-
-  @include respond-to(small-screens) {
-    font-size: 16px * 0.9;
-  }
-}
-
 .article-seperator {
   border: 0;
   height: 0;
