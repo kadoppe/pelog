@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+
+    Keen.publish(:show_index, {})
   end
 
   def show
@@ -9,6 +11,10 @@ class ArticlesController < ApplicationController
       published_at: date_from_params,
       slug: params[:slug]
     )
+
+    Keen.publish(:show_article, {
+      title: @article.title,
+    })
   end
 
   def feed
