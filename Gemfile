@@ -29,6 +29,7 @@ group :default do
   gem "sitemap_generator"
   gem "slim"
   gem "slim-rails"
+  gem 'keen'
 end
 
 group :development do
