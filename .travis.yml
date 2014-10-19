@@ -17,5 +17,3 @@ deploy:
   - rake db:migrate
   - rake articles:sync
   - rake sitemap:refresh
-env:
-  - KEEN_PROJECT_ID=544265c93831443b38c462a4
